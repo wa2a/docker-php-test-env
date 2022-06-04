@@ -12,5 +12,5 @@ RUN pear install PHP_CodeSniffer
 
 RUN echo "xdebug.mode=coverage" >> '/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini'
 
-RUN mkdir -p /project
-WORKDIR /project
+RUN mkdir -p /var/www/html
+WORKDIR /var/www/html
