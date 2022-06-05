@@ -12,5 +12,8 @@ RUN pear install PHP_CodeSniffer
 
 RUN echo "xdebug.mode=coverage" >> '/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini'
 
+COPY line-rate.sh /usr/local/bin/line-rate
+RUN chmod +x /usr/local/bin/line-rate
+
 RUN mkdir -p /var/www/html
 WORKDIR /var/www/html
